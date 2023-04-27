@@ -13,7 +13,7 @@ import galar from "../../assets/image/galar.png";
 export default function AreaCard() {
   return (
     <div className={styles.areaContainer}>
-      <Link key="kanto" to="/index/1">
+      <Link key="kanto" to="/pokedex/index/1">
         <button
           className={styles.buttonContainer}
           style={{
@@ -27,7 +27,7 @@ export default function AreaCard() {
           Kanto
         </button>
       </Link>
-      <Link key="johto" to="/index/2">
+      <Link key="johto" to="/pokedex/index/2">
         <button
           className={styles.buttonContainer}
           style={{
@@ -41,7 +41,7 @@ export default function AreaCard() {
           Johto
         </button>
       </Link>
-      <Link key="hoenn" to="/index/3">
+      <Link key="hoenn" to="/pokedex/index/3">
         <button
           className={styles.buttonContainer}
           style={{
@@ -55,7 +55,7 @@ export default function AreaCard() {
           Hoenn
         </button>
       </Link>
-      <Link key="sinnoh" to="/index/4">
+      <Link key="sinnoh" to="/pokedex/index/4">
         <button
           className={styles.buttonContainer}
           style={{
@@ -69,7 +69,7 @@ export default function AreaCard() {
           Sinnoh
         </button>
       </Link>
-      <Link key="unova" to="/index/5">
+      <Link key="unova" to="/pokedex/index/5">
         <button
           className={styles.buttonContainer}
           style={{
@@ -83,7 +83,7 @@ export default function AreaCard() {
           Unova
         </button>
       </Link>
-      <Link key="kalos" to="/index/6">
+      <Link key="kalos" to="/pokedex/index/6">
         <button
           className={styles.buttonContainer}
           style={{
@@ -97,7 +97,7 @@ export default function AreaCard() {
           Kalos
         </button>
       </Link>
-      <Link key="alola" to="/index/7">
+      <Link key="alola" to="/pokedex/index/7">
         <button
           className={styles.buttonContainer}
           style={{
@@ -111,7 +111,7 @@ export default function AreaCard() {
           Alola
         </button>
       </Link>
-      <Link key="galar" to="/index/8">
+      <Link key="galar" to="/pokedex/index/8">
         <button
           className={styles.buttonContainer}
           style={{

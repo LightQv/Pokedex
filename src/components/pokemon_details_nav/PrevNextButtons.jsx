@@ -6,12 +6,12 @@ export default function PrevNextButtons() {
   const { id } = useParams();
   return (
     <div>
-      <Link to={`/pokemon/${parseInt(`${id}`) - 1}`}>
+      <Link to={`/pokedex/pokemon/${parseInt(`${id}`) - 1}`}>
         <button className={styles.buttonContent} disabled={parseInt(id) === 1}>
           -
         </button>
       </Link>
-      <Link to={`/pokemon/${parseInt(`${id}`) + 1}`}>
+      <Link to={`/pokedex/pokemon/${parseInt(`${id}`) + 1}`}>
         <button
           className={styles.buttonContent}
           disabled={parseInt(id) === 898}

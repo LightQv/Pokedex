@@ -14,19 +14,19 @@ export default function Header() {
   return (
     <div className="header-container">
       <h3 className="header-title">Pokedex</h3>
-      <Link to="/">
+      <Link to="/pokedex">
         <button className="back-button" />
       </Link>
-      <Link to="/world">
+      <Link to="/pokedex/world">
         <button className="world-button" />
       </Link>
-      <Link to="/index/1">
+      <Link to="/pokedex/index/1">
         <button className="index-button" />
       </Link>
-      <Link to="/pokemon/1">
+      <Link to="/pokedex/pokemon/1">
         <button className="id-button" />
       </Link>
-      <Link to={`/pokemon/${randomId}`}>
+      <Link to={`/pokedex/pokemon/${randomId}`}>
         <button className="random-button" onClick={handleRandom} />
       </Link>
       <button

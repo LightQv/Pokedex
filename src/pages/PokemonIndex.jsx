@@ -20,10 +20,10 @@ export default function PokemonIndex() {
       .then((query) => {
         if (query.data.length > 0) {
           setPokemonsList(query.data);
-        } else navigate("/noresults");
+        } else navigate("/pokedex/no-results");
       })
       .catch((err) => {
-        if (err.response.status === 404) navigate("/notfound");
+        if (err.response.status === 404) navigate("/pokedex/not-found");
       })
       .finally(() => setIsLoaded(true));
   }, []);

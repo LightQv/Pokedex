@@ -21,7 +21,7 @@ export default function EvolutionCard({ pokemon }) {
       </h3>
       {pokemon.apiPreEvolution !== "none" ? (
         <div className={styles.preEvolutionContainer}>
-          <Link to={`/pokemon/${pokemon.apiPreEvolution.pokedexIdd}`}>
+          <Link to={`/pokedex/pokemon/${pokemon.apiPreEvolution.pokedexIdd}`}>
             <img
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.apiPreEvolution.pokedexIdd}.png`}
               alt={pokemon.apiPreEvolution.name}
@@ -36,7 +36,7 @@ export default function EvolutionCard({ pokemon }) {
       ) : null}
       {pokemon.apiEvolutions[0] !== undefined ? (
         <div className={styles.evolutionContainer}>
-          <Link to={`/pokemon/${pokemon.apiEvolutions[0].pokedexId}`}>
+          <Link to={`/pokedex/pokemon/${pokemon.apiEvolutions[0].pokedexId}`}>
             <img
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.apiEvolutions[0].pokedexId}.png`}
               alt={pokemon.apiEvolutions[0].name}

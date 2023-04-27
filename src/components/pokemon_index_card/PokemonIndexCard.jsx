@@ -7,7 +7,7 @@ export default function PokemonIndexCard({ pokemonsList, shiny }) {
   return (
     <div className={styles.indexContainer}>
       {pokemonsList.map((pokemon) => (
-        <Link key={pokemon.id} to={`/pokemon/${pokemon.id}/`}>
+        <Link key={pokemon.id} to={`/pokedex/pokemon/${pokemon.id}/`}>
           <button key={pokemon.name} className={styles.buttonContainer}>
             <img
               src={

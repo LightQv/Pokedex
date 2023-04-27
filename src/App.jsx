@@ -12,13 +12,13 @@ function App() {
     <div className="app-container">
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/world" element={<World />} />
-        <Route path="/index/:area" element={<PokemonIndex />} />
-        <Route path="/pokemon/:id" element={<PokemonCard />} />
+        <Route path="/pokedex" element={<Home />} />
+        <Route path="/pokedex/world" element={<World />} />
+        <Route path="/pokedex/index/:area" element={<PokemonIndex />} />
+        <Route path="/pokedex/pokemon/:id" element={<PokemonCard />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/noresults" element={<NoResults />} />
-        <Route path="/notfound" element={<NotFound />} />
+        <Route path="/pokedex/no-results" element={<NoResults />} />
+        <Route path="/pokedex//not-found" element={<NotFound />} />
       </Routes>
     </div>
   );

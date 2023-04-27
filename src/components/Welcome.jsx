@@ -5,7 +5,7 @@ export default function Welcome() {
     <div className="welcome-page">
       <div className="welcome-box">
         <h1 className="welcome-title">Welcome, Pokemon Trainer!</h1>
-        <Link to="/world">
+        <Link to="/pokedex/world">
           <button className="ok-button">Let's go !</button>
         </Link>
       </div>
