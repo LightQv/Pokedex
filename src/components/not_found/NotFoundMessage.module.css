@@ -1,0 +1,38 @@
+.notFoundContent {
+  margin: auto;
+  text-align: center;
+}
+
+.notFoundTitle,
+.notFoundText {
+  margin-bottom: 0.5rem;
+}
+
+.notFoundTitle {
+  color: var(--darkRed);
+}
+
+.notFoundText {
+  font-style: italic;
+}
+
+.notFoundImg {
+  width: 65px;
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .notFoundTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .notFoundText {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .notFoundImg {
+    width: 90px;
+  }
+}

@@ -1,0 +1,510 @@
+.app-container {
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  background-color: var(--white);
+  border-color: var(--mediumGrey);
+}
+
+button:active {
+  border-color: var(--darkRed);
+  color: var(--darkRed);
+}
+
+/* Home (z-index 1) */
+.home-page {
+  background: radial-gradient(var(--lightRed), var(--darkRed));
+  height: 100dvh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.pokeball-shadow {
+  width: 180px;
+  border-radius: 50%;
+  box-shadow: 5px 0 30px 18px rgb(140, 37, 37);
+}
+
+.pokeball {
+  position: relative;
+  height: 180px;
+  width: 180px;
+  border: 5px solid var(--black);
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--white), var(--lightGrey));
+  overflow: hidden;
+  box-shadow: inset -10px -10px 5px 4px var(--mediumGrey);
+  animation: shake 1.25s 3;
+  animation-play-state: running;
+}
+
+.pokeball::before,
+.pokeball::after {
+  content: "";
+  position: absolute;
+}
+
+.pokeball::before {
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(60deg, #f64747, #cc0000);
+}
+
+.pokeball::after {
+  width: 100%;
+  height: 7px;
+  top: calc(50% - 3.5px);
+  background: var(--black);
+}
+
+.pokeball-button {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+  z-index: 2;
+  border: 5px solid var(--black);
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--white), var(--lightGrey));
+  box-shadow: inset 0 0 0 4px rgb(182, 181, 181);
+  animation: blink 0.5s 8;
+  animation-play-state: running;
+}
+
+/* Pokeball animation */
+.pokeball:hover,
+.pokeball-button:hover {
+  cursor: pointer;
+  animation-play-state: running;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(20deg) translate(10px, 0);
+  }
+  40% {
+    transform: rotate(-20deg) translate(-10px, 0);
+  }
+  60% {
+    transform: rotate(10deg) translate(3px, 0);
+  }
+  80% {
+    transform: rotate(-10deg) translate(-3px, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+}
+
+@keyframes blink {
+  from {
+    background: linear-gradient(135deg, var(--white), var(--lightGrey));
+    box-shadow: inset 0 0 0 4px rgb(182, 181, 181);
+  }
+  to {
+    background: radial-gradient(var(--darkRed), var(--darkRed));
+    box-shadow: inset 0px 0px 8px 8px var(--darkRed);
+  }
+}
+
+/* Welcome Page (z-index 3) */
+.welcome-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(10, 10, 10, 0.8);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-box {
+  width: 30rem;
+  padding: 2.23rem 2rem;
+  background-color: var(--lightGrey);
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px var(--darkGrey);
+  border: 1px solid;
+  border-color: var(--lightGrey);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome-title {
+  font-size: larger;
+  color: var(--darkRed);
+}
+
+.ok-button {
+  height: 40px;
+  background-color: var(--lightGrey);
+  color: var(--darkRed);
+  font-size: smaller;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Header (z-index 1) */
+.header-container {
+  position: fixed;
+  height: 100dvh;
+  width: 77px;
+  background-color: var(--darkRed);
+  box-shadow: 0px 0px 5px var(--darkGrey);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.header-title {
+  display: none;
+}
+
+.back-button {
+  height: 45px;
+  width: 45px;
+  font-size: smaller;
+  background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.world-button {
+  height: 45px;
+  width: 45px;
+  font-size: smaller;
+  background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/old-sea-map.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.index-button {
+  height: 45px;
+  width: 45px;
+  font-size: smaller;
+  background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-radar.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.id-button {
+  height: 45px;
+  width: 45px;
+  font-size: smaller;
+  background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-doll.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.random-button {
+  height: 45px;
+  width: 45px;
+  font-size: smaller;
+  background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/super-rod.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.help-button {
+  height: 45px;
+  width: 45px;
+  font-size: smaller;
+  background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/unknown.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 65%;
+}
+
+/* Helping page */
+.helping-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(10, 10, 10, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.helping-box {
+  width: 38rem;
+  padding: 1.73rem 1.5rem;
+  background-color: var(--lightGrey);
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px var(--darkGrey);
+  border: 1px solid;
+  border-color: var(--lightGrey);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.helping-title {
+  color: var(--darkRed);
+}
+
+.helping-navigation,
+.helping-features {
+  color: var(--lightRed);
+}
+
+.helping-sub-title {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.helping-navigation > p,
+.helping-features > p {
+  color: var(--darkGrey);
+  font-size: x-small;
+}
+
+.helping-navigation > p:last-of-type {
+  padding-bottom: 0.5rem;
+}
+
+.close-button {
+  background-color: var(--lightGrey);
+  color: var(--darkRed);
+  font-weight: 600;
+}
+
+/* Pages share style */
+.world-page,
+.pokemon-index-page,
+.pokemon-page,
+.not-found-page,
+.loading-page {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  width: 100%;
+  background-color: var(--lightGrey);
+}
+
+.world-page,
+.pokemon-page,
+.not-found-page,
+.loading-page {
+  height: 100dvh;
+}
+
+.dummy-header {
+  height: 100%;
+  width: 77px;
+  padding: 1rem;
+}
+
+.areas-content,
+.index-content,
+.card-content {
+  margin: 0.7rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.areas-header,
+.index-header,
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid;
+  border-color: var(--mediumGrey);
+  background-color: var(--white);
+}
+
+.areas-title,
+.index-title,
+.card-title {
+  color: var(--darkRed);
+  padding: 0 0.5rem;
+}
+
+.card-title {
+  font-weight: 400;
+}
+
+.card-title span {
+  font-weight: 600;
+}
+
+.card-features {
+  display: flex;
+}
+
+/* Tablet & Smartphone (landscape forced on portrait) */
+@media only screen and (min-width: 320px) and (max-width: 1024px) and (orientation: portrait) {
+  .home-page,
+  .welcome-page,
+  .world-page,
+  .pokemon-index-page,
+  .pokemon-page,
+  .loading-page,
+  .not-found-page {
+    background-image: url(./assets/rotation.png),
+      radial-gradient(var(--lightRed), var(--darkRed));
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100dvh;
+  }
+
+  .pokeball {
+    display: none;
+  }
+
+  .pokeball-shadow {
+    display: none;
+  }
+
+  .header-container {
+    display: none;
+  }
+
+  .welcome-box,
+  .areas-content,
+  .index-content,
+  .card-content {
+    display: none;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .app-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pokeball {
+    animation: shake 1.25s infinite;
+    animation-play-state: paused;
+  }
+
+  .pokeball-button {
+    animation: blink 0.5s infinite;
+    animation-play-state: paused;
+  }
+
+  button:hover {
+    border-color: var(--darkRed);
+    color: var(--darkRed);
+  }
+
+  .header-container {
+    height: 77px;
+    width: 100%;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    border: 1px solid;
+    border-color: var(--lightRed);
+    background-color: var(--darkRed);
+    box-shadow: 0px 8px 8px var(--darkGrey);
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .header-title {
+    display: initial;
+    margin-right: auto;
+    font-size: 1.5rem;
+    color: var(--white);
+  }
+
+  .back-button,
+  .world-button,
+  .index-button,
+  .id-button,
+  .random-button {
+    margin-right: 1rem;
+  }
+
+  .helping-box {
+    width: 55rem;
+    padding: 2.23rem 2rem;
+  }
+
+  .helping-sub-title {
+    font-size: 1rem;
+  }
+
+  .helping-navigation > p,
+  .helping-features > p {
+    font-size: small;
+  }
+
+  .world-page,
+  .pokemon-index-page,
+  .pokemon-page,
+  .not-found-page,
+  .loading-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--lightGrey);
+  }
+
+  .dummy-header {
+    height: 77px;
+    width: 100%;
+  }
+
+  .areas-content,
+  .index-content,
+  .card-content {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .areas-header,
+  .index-header,
+  .card-header {
+    padding: 1rem;
+    border-radius: 0.8rem;
+  }
+
+  .areas-title,
+  .index-title,
+  .card-title {
+    color: var(--darkRed);
+    padding: 0 1rem;
+    font-size: larger;
+  }
+}

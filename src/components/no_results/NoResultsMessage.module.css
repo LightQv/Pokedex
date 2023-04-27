@@ -1,0 +1,38 @@
+.noResultsContent {
+  margin: auto;
+  text-align: center;
+}
+
+.noResultsTitle,
+.noResultsText {
+  margin-bottom: 0.5rem;
+}
+
+.noResultsTitle {
+  color: var(--darkRed);
+}
+
+.noResultsText {
+  font-style: italic;
+}
+
+.noResultsImg {
+  width: 65px;
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .noResultsTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .noResultsText {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .noResultsImg {
+    width: 80px;
+  }
+}

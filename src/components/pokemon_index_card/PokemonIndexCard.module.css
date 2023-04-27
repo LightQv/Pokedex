@@ -1,0 +1,36 @@
+.indexContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.buttonContainer {
+  border: 1px solid;
+  border-color: var(--mediumGrey);
+  background-color: var(--white);
+  height: 100%;
+  width: 100%;
+}
+
+.buttonContainer:hover {
+  transform: scale(1.02);
+}
+
+.pokemonName {
+  color: var(--lightRed);
+  font-size: small;
+  font-weight: 600;
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .indexContainer {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 1rem;
+  }
+
+  .pokemonName {
+    font-size: 12.5px;
+  }
+}

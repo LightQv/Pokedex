@@ -1,0 +1,30 @@
+.buttonContent {
+  height: 33px;
+  width: 33px;
+  margin-right: 0.5rem;
+  padding: 0.15rem;
+  font-size: smaller;
+  color: var(--darkRed);
+  font-weight: 600;
+}
+
+.buttonContent:target {
+  border: 1px solid;
+  border-color: var(--darkRed);
+}
+
+.buttonContent:disabled {
+  color: var(--darkGrey);
+  font-weight: normal;
+  cursor: default;
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .buttonContent {
+    height: 45px;
+    width: 45px;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+  }
+}

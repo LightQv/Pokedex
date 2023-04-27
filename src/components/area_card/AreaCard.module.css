@@ -1,0 +1,39 @@
+.areaContainer {
+  height: 85%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.buttonContainer {
+  height: 100%;
+  width: 100%;
+  color: var(--white);
+  font-size: large;
+  font-weight: 600;
+  filter: grayscale(0.3);
+}
+
+.buttonContainer:active {
+  transform: scale(1.02);
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .areaContainer {
+    height: fit-content;
+    gap: 1rem;
+  }
+
+  .buttonContainer {
+    height: 8.9rem;
+    font-size: x-large;
+    filter: grayscale(1);
+  }
+
+  .buttonContainer:hover {
+    transform: scale(1.03);
+    color: var(--white);
+    filter: grayscale(0);
+  }
+}
