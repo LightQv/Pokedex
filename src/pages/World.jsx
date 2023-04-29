@@ -1,4 +1,3 @@
-import React from "react";
 import BattleButton from "../components/battle_button/BattleButton";
 import AreaCard from "../components/area_card/AreaCard";
 

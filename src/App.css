@@ -311,10 +311,9 @@ button:active {
   background-color: var(--lightGrey);
 }
 
-.world-page,
-.pokemon-page,
-.not-found-page,
-.loading-page {
+.loading-page,
+.no-results-page,
+.not-found-page {
   height: 100dvh;
 }
 
@@ -453,6 +452,11 @@ button:active {
     display: initial;
     margin-right: auto;
     font-size: 1.5rem;
+    color: var(--white);
+  }
+
+  .header-title > a {
+    text-decoration: none;
     color: var(--white);
   }
 

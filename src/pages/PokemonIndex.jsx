@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import ShinyButton from "../components/shiny_button/ShinyButton";
@@ -26,7 +26,7 @@ export default function PokemonIndex() {
         if (err.response.status === 404) navigate("/pokedex/not-found");
       })
       .finally(() => setIsLoaded(true));
-  }, []);
+  }, [area, navigate]);
 
   if (!pokemonsList) return <LoadingScreen />;
   return (

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import PokemonDetailsCard from "../components/pokemon_details_card/PokemonDetailsCard";
@@ -26,7 +26,7 @@ export default function PokemonCard() {
         if (err.response.status === 404) navigate("/pokedex/not-found");
       })
       .finally(() => setIsLoaded(true));
-  }, [id]);
+  }, [id, navigate]);
 
   if (!pokemon) return <LoadingScreen />;
   return (

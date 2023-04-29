@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import RadarChart from "./radar_chart/RadarChart";
 import EvolutionCard from "./evolution_card/EvolutionCard";

@@ -17,6 +17,7 @@
 
 html {
   scrollbar-width: none;
+  background-color: var(--lightGrey);
 }
 
 html::-webkit-scrollbar {

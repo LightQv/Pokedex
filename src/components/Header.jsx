@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <div className="header-container">
       <h3 className="header-title">
-        Pokedex <span>by LightQv.</span>
+        <Link to="/pokedex/world">Pokedex</Link> <span>by LightQv.</span>
       </h3>
       <Link to="/pokedex">
         <button className="back-button" />
