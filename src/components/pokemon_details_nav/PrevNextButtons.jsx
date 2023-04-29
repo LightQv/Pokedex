@@ -7,12 +7,17 @@ export default function PrevNextButtons() {
   return (
     <div>
       <Link to={`/pokedex/pokemon/${parseInt(`${id}`) - 1}`}>
-        <button className={styles.buttonContent} disabled={parseInt(id) === 1}>
+        <button
+          type="button"
+          className={styles.buttonContent}
+          disabled={parseInt(id) === 1}
+        >
           -
         </button>
       </Link>
       <Link to={`/pokedex/pokemon/${parseInt(`${id}`) + 1}`}>
         <button
+          type="button"
           className={styles.buttonContent}
           disabled={parseInt(id) === 898}
         >

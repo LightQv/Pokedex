@@ -17,7 +17,7 @@
 }
 
 .notFoundImg {
-  width: 65px;
+  width: 4rem;
 }
 
 /* Desktop */
@@ -33,6 +33,6 @@
   }
 
   .notFoundImg {
-    width: 90px;
+    width: 5.6rem;
   }
 }

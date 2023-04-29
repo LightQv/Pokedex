@@ -51,32 +51,34 @@ export default function PokemonDetailsCard({ pokemon, shiny }) {
               alt={pokemon.name}
               className={styles.pokemonImg}
             />
-            <p className={styles.pokemonStats}>
-              Type{" "}
-              <span>
-                {pokemon.apiTypes[1]
-                  ? `${pokemon.apiTypes[0].name}/${pokemon.apiTypes[1].name}`
-                  : `${pokemon.apiTypes[0].name}`}
-              </span>
-            </p>
-            <p className={styles.pokemonStats}>
-              HP : <span>{pokemon.stats.HP}</span>
-            </p>
-            <p className={styles.pokemonStats}>
-              Attaque : <span>{pokemon.stats.attack}</span>
-            </p>
-            <p className={styles.pokemonStats}>
-              Défense : <span>{pokemon.stats.defense}</span>
-            </p>
-            <p className={styles.pokemonStats}>
-              Attaque spéciale : <span>{pokemon.stats.special_attack}</span>
-            </p>
-            <p className={styles.pokemonStats}>
-              Défense spéciale : <span>{pokemon.stats.special_defense}</span>
-            </p>
-            <p className={styles.pokemonStats}>
-              Vitesse : <span>{pokemon.stats.speed}</span>
-            </p>
+            <div className={styles.pokemonStatsContainer}>
+              <p className={styles.pokemonStats}>
+                Type{" "}
+                <span>
+                  {pokemon.apiTypes[1]
+                    ? `${pokemon.apiTypes[0].name}/${pokemon.apiTypes[1].name}`
+                    : `${pokemon.apiTypes[0].name}`}
+                </span>
+              </p>
+              <p className={styles.pokemonStats}>
+                HP : <span>{pokemon.stats.HP}</span>
+              </p>
+              <p className={styles.pokemonStats}>
+                Attaque : <span>{pokemon.stats.attack}</span>
+              </p>
+              <p className={styles.pokemonStats}>
+                Défense : <span>{pokemon.stats.defense}</span>
+              </p>
+              <p className={styles.pokemonStats}>
+                Attaque spéciale : <span>{pokemon.stats.special_attack}</span>
+              </p>
+              <p className={styles.pokemonStats}>
+                Défense spéciale : <span>{pokemon.stats.special_defense}</span>
+              </p>
+              <p className={styles.pokemonStats}>
+                Vitesse : <span>{pokemon.stats.speed}</span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -84,7 +86,7 @@ export default function PokemonDetailsCard({ pokemon, shiny }) {
   );
 }
 
-PokemonDetailsCard.PropTypes = {
+PokemonDetailsCard.propTypes = {
   pokemon: PropTypes.object.isRequired,
   shiny: PropTypes.bool,
 };

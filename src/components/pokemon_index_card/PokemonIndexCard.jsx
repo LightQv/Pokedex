@@ -8,7 +8,11 @@ export default function PokemonIndexCard({ pokemonsList, shiny }) {
     <div className={styles.indexContainer}>
       {pokemonsList.map((pokemon) => (
         <Link key={pokemon.id} to={`/pokedex/pokemon/${pokemon.id}/`}>
-          <button key={pokemon.name} className={styles.buttonContainer}>
+          <button
+            key={pokemon.name}
+            type="button"
+            className={styles.buttonContainer}
+          >
             <img
               src={
                 shiny
@@ -27,7 +31,7 @@ export default function PokemonIndexCard({ pokemonsList, shiny }) {
   );
 }
 
-PokemonIndexCard.PropTypes = {
-  pokemonList: PropTypes.array.isRequired,
+PokemonIndexCard.propTypes = {
+  pokemonList: PropTypes.array,
   shiny: PropTypes.bool,
 };

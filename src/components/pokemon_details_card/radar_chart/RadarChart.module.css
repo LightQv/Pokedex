@@ -1,5 +1,5 @@
 .radarStats {
-  width: 280px;
+  width: 17.5rem;
   margin: auto;
   cursor: pointer;
 }
@@ -7,7 +7,7 @@
 /* Desktop */
 @media screen and (min-width: 1024px) {
   .radarStats {
-    width: 580px;
-    height: 580px;
+    height: 36.25rem;
+    width: 36.25rem;
   }
 }

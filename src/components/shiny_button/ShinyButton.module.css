@@ -1,7 +1,7 @@
 .buttonContent,
 .buttonContentShiny {
-  height: 33px;
-  width: 33px;
+  height: 2rem;
+  width: 2rem;
   margin-right: 0.25rem;
   padding: 0.15rem;
   font-size: smaller;
@@ -20,8 +20,8 @@
 @media screen and (min-width: 1024px) {
   .buttonContent,
   .buttonContentShiny {
-    height: 45px;
-    width: 45px;
+    height: 2.8rem;
+    width: 2.8rem;
     margin-right: 0.5rem;
     padding: 0.5rem;
     background-size: 30px;

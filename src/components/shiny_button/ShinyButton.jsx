@@ -5,6 +5,7 @@ export default function ShinyButton({ shiny, setShiny }) {
   return (
     <div>
       <button
+        type="button"
         className={shiny ? styles.buttonContentShiny : styles.buttonContent}
         onClick={() => {
           setShiny(!shiny);
@@ -14,4 +15,4 @@ export default function ShinyButton({ shiny, setShiny }) {
   );
 }
 
-ShinyButton.PropTypes = {};
+ShinyButton.propTypes = { shiny: PropTypes.bool, setShiny: PropTypes.func };

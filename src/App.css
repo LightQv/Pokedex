@@ -4,7 +4,7 @@
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 0.5rem;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1rem;
@@ -34,15 +34,15 @@ button:active {
 }
 
 .pokeball-shadow {
-  width: 180px;
+  width: 11.25rem;
   border-radius: 50%;
   box-shadow: 5px 0 30px 18px rgb(140, 37, 37);
 }
 
 .pokeball {
   position: relative;
-  height: 180px;
-  width: 180px;
+  height: 11.25rem;
+  width: 11.25rem;
   border: 5px solid var(--black);
   border-radius: 50%;
   background: linear-gradient(135deg, var(--white), var(--lightGrey));
@@ -140,8 +140,8 @@ button:active {
 }
 
 .welcome-box {
-  width: 30rem;
-  padding: 2.23rem 2rem;
+  width: 20rem;
+  padding: 2rem 1.4rem;
   background-color: var(--lightGrey);
   border-radius: 5px;
   box-shadow: 0px 0px 5px var(--darkGrey);
@@ -153,15 +153,15 @@ button:active {
 }
 
 .welcome-title {
-  font-size: larger;
+  font-size: 0.8rem;
   color: var(--darkRed);
 }
 
 .ok-button {
-  height: 40px;
+  width: 5.8rem;
   background-color: var(--lightGrey);
   color: var(--darkRed);
-  font-size: smaller;
+  font-size: 0.8rem;
   font-weight: 600;
   text-decoration: none;
 }
@@ -169,12 +169,12 @@ button:active {
 /* Header (z-index 1) */
 .header-container {
   position: fixed;
-  height: 100dvh;
-  width: 77px;
+  height: 4.8rem;
+  width: 100dvw;
   background-color: var(--darkRed);
-  box-shadow: 0px 0px 5px var(--darkGrey);
+  box-shadow: 0px 6px 6px var(--darkGrey);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
@@ -186,8 +186,8 @@ button:active {
 }
 
 .back-button {
-  height: 45px;
-  width: 45px;
+  height: 2.8rem;
+  width: 2.8rem;
   font-size: smaller;
   background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png");
   background-position: center;
@@ -195,8 +195,8 @@ button:active {
 }
 
 .world-button {
-  height: 45px;
-  width: 45px;
+  height: 2.8rem;
+  width: 2.8rem;
   font-size: smaller;
   background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/old-sea-map.png");
   background-position: center;
@@ -204,8 +204,8 @@ button:active {
 }
 
 .index-button {
-  height: 45px;
-  width: 45px;
+  height: 2.8rem;
+  width: 2.8rem;
   font-size: smaller;
   background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-radar.png");
   background-position: center;
@@ -213,8 +213,8 @@ button:active {
 }
 
 .id-button {
-  height: 45px;
-  width: 45px;
+  height: 2.8rem;
+  width: 2.8rem;
   font-size: smaller;
   background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-doll.png");
   background-position: center;
@@ -222,8 +222,8 @@ button:active {
 }
 
 .random-button {
-  height: 45px;
-  width: 45px;
+  height: 2.8rem;
+  width: 2.8rem;
   font-size: smaller;
   background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/super-rod.png");
   background-position: center;
@@ -231,8 +231,8 @@ button:active {
 }
 
 .help-button {
-  height: 45px;
-  width: 45px;
+  height: 2.8rem;
+  width: 2.8rem;
   font-size: smaller;
   background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/unknown.png");
   background-position: center;
@@ -254,14 +254,15 @@ button:active {
 }
 
 .helping-box {
-  width: 38rem;
-  padding: 1.73rem 1.5rem;
+  width: 20rem;
+  padding: 1.5rem;
   background-color: var(--lightGrey);
   border-radius: 5px;
   box-shadow: 0px 0px 5px var(--darkGrey);
   border: 1px solid;
   border-color: var(--lightGrey);
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
@@ -294,6 +295,7 @@ button:active {
   background-color: var(--lightGrey);
   color: var(--darkRed);
   font-weight: 600;
+  margin-top: 1rem;
 }
 
 /* Pages share style */
@@ -303,9 +305,9 @@ button:active {
 .not-found-page,
 .loading-page {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 0.5rem;
-  width: 100%;
+  width: 100dvw;
   background-color: var(--lightGrey);
 }
 
@@ -317,16 +319,15 @@ button:active {
 }
 
 .dummy-header {
-  height: 100%;
-  width: 77px;
+  height: 4.8rem;
+  width: 100dvw;
   padding: 1rem;
 }
 
 .areas-content,
 .index-content,
 .card-content {
-  margin: 0.7rem 1rem;
-  width: 100%;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -340,7 +341,7 @@ button:active {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0.25rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
   border: 1px solid;
   border-color: var(--mediumGrey);
@@ -366,8 +367,8 @@ button:active {
   display: flex;
 }
 
-/* Tablet & Smartphone (landscape forced on portrait) */
-@media only screen and (min-width: 320px) and (max-width: 1024px) and (orientation: portrait) {
+/* Tablet & Smartphone (portrait forced on landscape) */
+@media only screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
   .home-page,
   .welcome-page,
   .world-page,
@@ -424,13 +425,24 @@ button:active {
     color: var(--darkRed);
   }
 
+  .welcome-box {
+    width: 30rem;
+    padding: 2rem 1.4rem;
+  }
+
+  .welcome-title {
+    font-size: 1.2rem;
+  }
+
+  .ok-button {
+    width: 7rem;
+    font-size: 0.9rem;
+  }
+
   .header-container {
-    height: 77px;
+    height: 4.8rem;
     width: 100%;
-    border-bottom-left-radius: 0.8rem;
-    border-bottom-right-radius: 0.8rem;
-    border: 1px solid;
-    border-color: var(--lightRed);
+    padding: 1rem 2.5rem;
     background-color: var(--darkRed);
     box-shadow: 0px 8px 8px var(--darkGrey);
     flex-direction: row;
@@ -444,6 +456,12 @@ button:active {
     color: var(--white);
   }
 
+  .header-title > span {
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: normal;
+  }
+
   .back-button,
   .world-button,
   .index-button,
@@ -453,7 +471,8 @@ button:active {
   }
 
   .helping-box {
-    width: 55rem;
+    flex-direction: row;
+    width: 45rem;
     padding: 2.23rem 2rem;
   }
 
@@ -479,14 +498,14 @@ button:active {
   }
 
   .dummy-header {
-    height: 77px;
+    height: 4.8rem;
     width: 100%;
   }
 
   .areas-content,
   .index-content,
   .card-content {
-    width: 95%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

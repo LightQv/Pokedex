@@ -6,7 +6,7 @@ export default function Help({ helpIsActive, setHelpIsActive }) {
           <h2 className="helping-title">Need any help ?</h2>
           <section className="helping-navigation">
             <h4 className="helping-sub-title">Navigation :</h4>
-            <p>Use the left bar to navigate throught the application.</p>
+            <p>Use the top bar to navigate throught the application.</p>
             <p>Pokeball : go back to home-screen.</p>
             <p>Map : go to the areas selection page.</p>
             <p>Pokemon : go to the Pokemon Index of the first generation.</p>

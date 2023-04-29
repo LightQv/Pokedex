@@ -53,6 +53,6 @@ export default function EvolutionCard({ pokemon }) {
   );
 }
 
-EvolutionCard.PropTypes = {
+EvolutionCard.propTypes = {
   pokemon: PropTypes.object.isRequired,
 };

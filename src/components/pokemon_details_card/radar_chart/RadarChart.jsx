@@ -129,6 +129,6 @@ export default function RadarChart({ pokemon }) {
   );
 }
 
-RadarChart.PropTypes = {
+RadarChart.propTypes = {
   pokemon: PropTypes.object.isRequired,
 };

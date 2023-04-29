@@ -5,11 +5,16 @@
 }
 
 .buttonContainer {
+  height: 6.5rem;
+  width: 100%;
   border: 1px solid;
   border-color: var(--mediumGrey);
   background-color: var(--white);
-  height: 100%;
-  width: 100%;
+}
+
+.buttonContainer > img {
+  height: 3.5rem;
+  width: 3.5rem;
 }
 
 .buttonContainer:hover {
@@ -18,7 +23,7 @@
 
 .pokemonName {
   color: var(--lightRed);
-  font-size: small;
+  font-size: 0.5rem;
   font-weight: 600;
 }
 
@@ -26,11 +31,20 @@
 @media screen and (min-width: 1024px) {
   .indexContainer {
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
   }
 
+  .buttonContainer {
+    height: 8rem;
+  }
+
+  .buttonContainer > img {
+    height: 5rem;
+    width: 5rem;
+  }
+
   .pokemonName {
-    font-size: 12.5px;
+    font-size: 0.85rem;
   }
 }

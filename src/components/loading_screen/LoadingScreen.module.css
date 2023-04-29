@@ -16,7 +16,7 @@
 }
 
 .waitImg {
-  width: 85px;
+  width: 5.3rem;
 }
 
 /* Desktop */
@@ -32,6 +32,6 @@
   }
 
   .waitImg {
-    width: 100px;
+    width: 6.25rem;
   }
 }

@@ -1,12 +1,11 @@
 .areaContainer {
-  height: 85%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
 }
 
 .buttonContainer {
-  height: 100%;
+  height: 7.3rem;
   width: 100%;
   color: var(--white);
   font-size: large;

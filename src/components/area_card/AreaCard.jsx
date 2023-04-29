@@ -15,6 +15,7 @@ export default function AreaCard() {
     <div className={styles.areaContainer}>
       <Link key="kanto" to="/pokedex/index/1">
         <button
+          type="button"
           className={styles.buttonContainer}
           style={{
             backgroundImage: `url(${kanto})`,
@@ -29,6 +30,7 @@ export default function AreaCard() {
       </Link>
       <Link key="johto" to="/pokedex/index/2">
         <button
+          type="button"
           className={styles.buttonContainer}
           style={{
             backgroundImage: `url(${johto})`,
@@ -43,6 +45,7 @@ export default function AreaCard() {
       </Link>
       <Link key="hoenn" to="/pokedex/index/3">
         <button
+          type="button"
           className={styles.buttonContainer}
           style={{
             backgroundImage: `url(${hoenn})`,
@@ -57,6 +60,7 @@ export default function AreaCard() {
       </Link>
       <Link key="sinnoh" to="/pokedex/index/4">
         <button
+          type="button"
           className={styles.buttonContainer}
           style={{
             backgroundImage: `url(${sinnoh})`,
@@ -71,6 +75,7 @@ export default function AreaCard() {
       </Link>
       <Link key="unova" to="/pokedex/index/5">
         <button
+          type="button"
           className={styles.buttonContainer}
           style={{
             backgroundImage: `url(${unova})`,
@@ -85,6 +90,7 @@ export default function AreaCard() {
       </Link>
       <Link key="kalos" to="/pokedex/index/6">
         <button
+          type="button"
           className={styles.buttonContainer}
           style={{
             backgroundImage: `url(${kalos})`,
@@ -99,6 +105,7 @@ export default function AreaCard() {
       </Link>
       <Link key="alola" to="/pokedex/index/7">
         <button
+          type="button"
           className={styles.buttonContainer}
           style={{
             backgroundImage: `url(${alola})`,
@@ -113,6 +120,7 @@ export default function AreaCard() {
       </Link>
       <Link key="galar" to="/pokedex/index/8">
         <button
+          type="button"
           className={styles.buttonContainer}
           style={{
             backgroundImage: `url(${galar})`,

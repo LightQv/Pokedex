@@ -24,17 +24,29 @@ export default function AudioButtons({ pokemon }) {
   return (
     <div>
       {pokemon.name === "Pikachu" ? (
-        <button className={styles.buttonContent} onClick={audioPlayPika}>
+        <button
+          type="button"
+          className={styles.buttonContent}
+          onClick={audioPlayPika}
+        >
           !
         </button>
       ) : null}
       {pokemon.name === "Mewtwo" ? (
-        <button className={styles.buttonContent} onClick={audioPlayMewtwo}>
+        <button
+          type="button"
+          className={styles.buttonContent}
+          onClick={audioPlayMewtwo}
+        >
           !
         </button>
       ) : null}
       {pokemon.name === "Mew" ? (
-        <button className={styles.buttonContent} onClick={audioPlayMew}>
+        <button
+          type="button"
+          className={styles.buttonContent}
+          onClick={audioPlayMew}
+        >
           !
         </button>
       ) : null}
