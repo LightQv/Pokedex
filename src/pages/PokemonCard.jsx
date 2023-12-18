@@ -23,7 +23,7 @@ export default function PokemonCard() {
         setPokemon(query.data);
       })
       .catch((err) => {
-        if (err.response.status === 404) navigate("/pokedex/not-found");
+        if (err.response.status === 404) navigate("/not-found");
       })
       .finally(() => setIsLoaded(true));
   }, [id, navigate]);
